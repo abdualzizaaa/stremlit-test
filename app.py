@@ -21,7 +21,7 @@ st.set_page_config(
 # -----------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("saudi_weather_sample.csv")
+    df = pd.read_csv("data/saudi_weather_sample.csv")
     if "datetime" in df.columns:
         df["datetime"] = pd.to_datetime(df["datetime"], errors="coerce")
     return df
